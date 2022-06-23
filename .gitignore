@@ -23,4 +23,8 @@
 hs_err_pid*
 
 #db_data directory
-/db_data
+db_data
+
+#Intelij config
+.DS_Store
+.idea
