@@ -32,6 +32,10 @@ CREATE TABLE IF NOT EXISTS `Personenverwaltung`.`Person` (
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
+INSERT INTO `Person` (`id`, `name`, `lastname`, `email`, `birthdate`, `gender`) VALUES
+(1, 'Silvan', 'Dubach', 'silvan.dubach@lernende.bbw.ch', '2004-06-21', 'male'),
+(2, 'Maurin', 'Schucan', 'maurin.schucan@lernende.bbw.ch', '2004-06-21', 'male'),
+(3, 'Yves', 'Huber', 'yves.huber@lernende.bbw.ch', '2005-11-14', 'male');
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
