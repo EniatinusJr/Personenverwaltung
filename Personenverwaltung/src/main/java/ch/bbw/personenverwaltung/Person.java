@@ -1,8 +1,10 @@
 package ch.bbw.personenverwaltung;
 
+import com.sun.istack.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 
 @Entity
@@ -10,9 +12,16 @@ public class Person {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
+    @NotNull
+    @Size(min = 2, max = 220)
     private String name;
+    @NotNull
+    @Size(min = 2, max = 220)
     private String lastname;
+    @NotNull
+    @Email
     private String email;
+    @NotNull
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate birthdate;
