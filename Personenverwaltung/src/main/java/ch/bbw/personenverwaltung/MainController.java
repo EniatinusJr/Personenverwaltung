@@ -12,8 +12,8 @@ import java.util.Optional;
 @Controller
 public class MainController {
     private DataRepository dataRepository;
-    @Autowired
 
+    @Autowired
     public MainController(DataRepository dataRepository) {
         this.dataRepository = dataRepository;
     }
